@@ -42,5 +42,10 @@ function GenerateBtn() {
         document.body.removeChild(tempInput);
         alert('color copied to clipboard: ' + colortext);
     }
-    
+    function ResetBtn() {
+        colorCode.innerHTML = '';
+        colorBox.style.backgroundColor = '';
+        rgbcode.innerHTML = '';
+        H1.style.color = '';
+    }
 

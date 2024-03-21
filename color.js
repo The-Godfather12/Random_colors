@@ -3,6 +3,7 @@ const colorBox = document.getElementById('color-box');
 const copyHex = document.getElementById('copy-btn');
 const generateBtn = document.getElementById('generate-btn');
 const rgbcode = document.getElementById('rgbcode');
+const H1= document.getElementById('h1')
 
 let color_code = '';
 
@@ -14,13 +15,20 @@ function GenerateBtn() {
         hexColor += HexChars[Math.floor(Math.random() * 16)]
     };
 
+
+    //hex codes
     colorBox.style.backgroundColor = hexColor;
     colorCode.innerHTML =hexColor;
     colorCode.style.color = hexColor;
 
+
+    //rgb codes
     const colortext = colorBox.style.backgroundColor;
     rgbcode.innerHTML = colortext;
     rgbcode.style.color = colortext;
+
+    //h1
+    H1.style.color = hexColor;
 
     
     }

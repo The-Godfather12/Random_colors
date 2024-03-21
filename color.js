@@ -29,8 +29,18 @@ function GenerateBtn() {
 
     //h1
     H1.style.color = hexColor;
+    };
 
-    
+    //copy 
+    function RGB() {
+        const colortext =colorBox.style.backgroundColor;
+        const tempInput = document.createElement('input');
+        document.body.appendChild(tempInput);
+        tempInput.value = colortext;
+        tempInput.select();
+        document.execCommand('copy')
+        document.body.removeChild(tempInput);
+        alert('color copied to clipboard: ' + colortext);
     }
     
 
